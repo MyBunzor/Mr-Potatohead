@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Method that saves checkboxes when phone is rotated
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);            // always call super
         CheckBox cb0 = findViewById(R.id.checkhat);
@@ -34,11 +35,13 @@ public class MainActivity extends AppCompatActivity {
         outState.putBoolean("shoes", cb9.isChecked());
     }
 
+    // Method that's activated when app is opened
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // If savedInstanceState isn't null, the states were saved, which are reloaded here
         if (savedInstanceState != null) {
             boolean saveHat = savedInstanceState.getBoolean("hat");
             ImageView imageHat = (ImageView) findViewById(R.id.hat);
@@ -80,109 +83,110 @@ public class MainActivity extends AppCompatActivity {
             ImageView imageShoes = (ImageView) findViewById(R.id.shoes);
             imageShoes.setVisibility(saveShoes ? View.VISIBLE : View.INVISIBLE);
         }
-
     }
+
+    // Method to check whether checkbox is clicked; if so, image is visualized
     public void checkClicked(View v) {
         CheckBox checkbox = (CheckBox) v;
         checkbox.getText().toString();
         switch (checkbox.getId()) {
             case (R.id.checkhat):
                 if (checkbox.isChecked()) {
-                    ImageView hat = (ImageView) findViewById(R.id.hat);
+                    ImageView hat = findViewById(R.id.hat);
                     hat.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView hat = (ImageView) findViewById(R.id.hat);
+                    ImageView hat = findViewById(R.id.hat);
                     hat.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkeyes):
                 if (checkbox.isChecked()) {
-                    ImageView eyes = (ImageView) findViewById(R.id.eyes);
+                    ImageView eyes = findViewById(R.id.eyes);
                     eyes.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView eyes = (ImageView) findViewById(R.id.eyes);
+                    ImageView eyes = findViewById(R.id.eyes);
                     eyes.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkeyebrows):
                 if (checkbox.isChecked()) {
-                    ImageView eyebrows = (ImageView) findViewById(R.id.eyebrows);
+                    ImageView eyebrows = findViewById(R.id.eyebrows);
                     eyebrows.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView eyebrows = (ImageView) findViewById(R.id.eyebrows);
+                    ImageView eyebrows = findViewById(R.id.eyebrows);
                     eyebrows.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkglasses):
                 if (checkbox.isChecked()) {
-                    ImageView glasses = (ImageView) findViewById(R.id.glasses);
+                    ImageView glasses = findViewById(R.id.glasses);
                     glasses.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView glasses = (ImageView) findViewById(R.id.glasses);
+                    ImageView glasses = findViewById(R.id.glasses);
                     glasses.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checknose):
                 if (checkbox.isChecked()) {
-                    ImageView nose = (ImageView) findViewById(R.id.nose);
+                    ImageView nose = findViewById(R.id.nose);
                     nose.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView nose = (ImageView) findViewById(R.id.nose);
+                    ImageView nose = findViewById(R.id.nose);
                     nose.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkmouth):
                 if (checkbox.isChecked()) {
-                    ImageView mouth = (ImageView) findViewById(R.id.mouth);
+                    ImageView mouth = findViewById(R.id.mouth);
                     mouth.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView mouth = (ImageView) findViewById(R.id.mouth);
+                    ImageView mouth = findViewById(R.id.mouth);
                     mouth.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkmustache):
                 if (checkbox.isChecked()) {
-                    ImageView mustache = (ImageView) findViewById(R.id.mustache);
+                    ImageView mustache = findViewById(R.id.mustache);
                     mustache.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView mustache = (ImageView) findViewById(R.id.mustache);
+                    ImageView mustache = findViewById(R.id.mustache);
                     mustache.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkears):
                 if (checkbox.isChecked()) {
-                    ImageView ears = (ImageView) findViewById(R.id.ears);
+                    ImageView ears = findViewById(R.id.ears);
                     ears.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView ears = (ImageView) findViewById(R.id.ears);
+                    ImageView ears = findViewById(R.id.ears);
                     ears.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkarms):
                 if (checkbox.isChecked()) {
-                    ImageView arms = (ImageView) findViewById(R.id.arms);
+                    ImageView arms = findViewById(R.id.arms);
                     arms.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView arms = (ImageView) findViewById(R.id.arms);
+                    ImageView arms = findViewById(R.id.arms);
                     arms.setVisibility(View.INVISIBLE);
                 }
                 break;
             case (R.id.checkshoes):
                 if (checkbox.isChecked()) {
-                    ImageView shoes = (ImageView) findViewById(R.id.shoes);
+                    ImageView shoes = findViewById(R.id.shoes);
                     shoes.setVisibility(View.VISIBLE);
                 }
                 else {
-                    ImageView shoes = (ImageView) findViewById(R.id.shoes);
+                    ImageView shoes = findViewById(R.id.shoes);
                     shoes.setVisibility(View.INVISIBLE);
                 }
                 break;
